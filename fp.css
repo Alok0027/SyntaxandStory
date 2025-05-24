@@ -1,0 +1,179 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    text-align: center;
+    background-color: #fcfaf8;
+    padding : 1rem;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    max-width: 1300px;
+    margin: 0 auto;
+    border-bottom: 1.4px solid #000; 
+    padding-bottom: 1rem;
+}
+
+.logoclass{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.logo{
+    width: 1.5rem;
+    height: 2.5rem; 
+    padding-top: 0.1rem;
+}
+
+.logo-text{
+  font-family: "Bytesized", sans-serif;
+  font-weight: 500;
+  font-style: bold;
+  font-size: 2.4rem;
+  color: black;
+}
+
+.navbar{
+    display: none;
+    justify-content: center;
+    gap: 2rem;
+    padding-top: 1rem;
+}
+
+@media screen and (min-width: 775px){
+    .navbar{
+        display: flex;
+    }
+}
+
+.navlink{
+    color: rgba(0, 0, 0, 0.663);
+    font-size: 1.2rem;
+}
+
+.navlink:hover{
+    color: rgba(155, 93, 18, 0.665);
+    transition: 1.2s;
+    text-decoration: underline;
+}
+
+.menu-button{
+    display: none;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    background-color: #dbdbdbd3;
+}
+@media screen and (max-width: 775px){
+    .menu-button{
+        display: block;
+    }
+}
+.menu-icon{
+    height: 1.8rem;
+    width: 1.8rem;
+}
+
+.main-section{
+    max-width: 1300px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 2rem;
+    gap: 2rem;
+}
+
+.title{
+    font-size: 2.7rem;
+    font-weight: 600;
+    font-family:"Bytesized", sans-serif ;
+}
+
+.left-section{
+    text-align: center;
+    animation: slidefromLeft 1s ease forwards;
+    opacity: 0;
+}
+
+@keyframes slidefromLeft {
+    0%{
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.para{
+    font-size: 1rem;
+    padding: 1.5rem;
+    color:#0000005d;
+}
+
+.button-container{
+    display: flex;
+    justify-content: center;
+    gap: 1.75rem;
+}
+
+.Joinnow-button{
+    height: 2.3rem;
+    width:6.9rem;
+    padding: 0.6rem 1.5rem;
+    border-radius: 0.2rem;
+    background-color: rgba(128, 128, 128, 0.473);
+    color: white;
+    font-weight: 20;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.Joinnow-button:hover{
+    background-color: rgba(128, 128, 128, 0.926);
+    color: black;
+    transform: scale(1.05);
+}
+.About-button{
+    padding-top: 0.70rem;
+    color: rgba(0, 0, 0, 0.663);
+}
+
+.About-button:hover{
+    color: rgba(155, 93, 18, 0.665);
+    transform: scale(1.05);
+}
+
+.image1{
+    width: 600px;
+    height: 600px;
+}
+
+@media screen and (min-width:775px){
+    .main-section{
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+    .left-section{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .image1{
+        width: 550px;
+        height: 550px;
+        border-radius: 1rem;
+    }
+
+}
